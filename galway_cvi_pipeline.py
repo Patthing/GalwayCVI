@@ -57,18 +57,16 @@ class Indicator:
 
 INDICATORS: List[Indicator] = [
     Indicator(
-        name="creative_industry_employment",
-        provider="pxstat",
-        source_id="TABLE_CODE_EMP_NACE",  # TODO replace
-        selector={
-            "NACE Rev2": ["J58","J59","J60","M71","R90","R91"],
-            "Statistic": "Persons Employed",
-            "County": "Galway",
-        },
-        transform="sum",
-        dimension="creative_economy",
-        postprocess="per_capita",
-    ),
+    name="creative_industry_employment",
+    provider="pxstat",
+    source_id="EHA03",   # ← this line
+    selector={
+        "NACE Rev2": ["J58", "J59", "J60", "M71", "R90", "R91"],
+        "Statistic": "Persons Employed",
+        "County": "Galway",
+    },
+    ...
+),
     Indicator(
         name="film_production_days",
         provider="screen_ireland",
