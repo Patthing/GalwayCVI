@@ -56,19 +56,19 @@ class Indicator:
             self.weight = _default_weight(self.dimension)
 
 INDICATORS: List[Indicator] = [
-   Indicator(
-    name="creative_industry_employment",
-    provider="pxstat",
-    source_id="BRA/BRA30",                      # ← COMMA here
-    selector={
-        "Statistic": "Persons Engaged",     # wording in EHA03 table
-        "County": "Galway",
-        "NACE Rev 2": ["J58", "J59", "J60", "M71", "R90", "R91"],
-    },
-    transform="sum",
-    dimension="creative_economy",
-    postprocess="per_capita",
-),
+   # Indicator(
+#     name="creative_industry_employment",
+#     provider="pxstat",
+#     source_id="BRA/BRA30",
+#     selector={
+#         "Statistic": "Number of Enterprises",
+#         "County": "Galway",
+#         "NACE Rev 2": ["J58", "J59", "J60", "M71", "R90", "R91"],
+#     },
+#     transform="sum",
+#     dimension="creative_economy",
+#     postprocess="per_capita",
+# ),
     Indicator(
         name="film_production_days",
         provider="screen_ireland",
