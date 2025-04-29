@@ -59,7 +59,7 @@ INDICATORS: List[Indicator] = [
    Indicator(
     name="creative_industry_employment",
     provider="pxstat",
-    source_id="EHA/EHA03",                      # ← COMMA here
+    source_id="BRA/BRA30",                      # ← COMMA here
     selector={
         "Statistic": "Persons Engaged",     # wording in EHA03 table
         "County": "Galway",
